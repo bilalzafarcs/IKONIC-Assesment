@@ -1,0 +1,362 @@
+/*
+Theme Name: Ikonic Test Theme
+Author: Bilal
+*/
+
+        :root {
+            --primary: #09c6f9;
+            --secondary: #045de9;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .project-card {
+            display: flex;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-card img {
+            width: 200px;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .project-details {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        .project-details h5 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .project-details p {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .project-details .price-info {
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #007bff;
+        }
+        @media (max-width: 991px) {
+            .project-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+    
+            .project-card img {
+                width: 100%;
+                height: 250px;
+            }
+    
+            .project-details {
+                padding: 15px;
+            }
+    
+            .project-details h5 {
+                font-size: 1.25rem;
+            }
+    
+            .project-details p {
+                font-size: 0.9rem;
+            }
+        }
+
+        button {
+            border-radius: 4px;
+            padding: 12px 24px;
+            color: white;
+            display: inline-block;
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 10px;
+        }
+		.btn{
+			border: 0px;
+		}
+
+        .btn-container .btn {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            border-radius: 5px;
+        }
+
+        .btn-primary:hover {
+            background-position: 100% 100%;
+            color: white;
+        }
+
+        .btn-primary {
+            font-size: 14px;
+            background-color: var(--primary);
+            background-repeat: no-repeat;
+            background-size: 200% 200%;
+            -webkit-transition: .5s;
+            transition: .5s;
+        }
+
+        .btn-outline-secondary {
+            border: 2px solid var(--secondary);
+            color: var(--secondary);
+        }
+
+        .btn-outline-secondary:hover {
+            background-color: var(--secondary);
+            color: white;
+            -webkit-transition: .5s;
+            transition: .5s;
+        }
+
+        .bg-light-gradient {
+            background: linear-gradient(to right, #f9f9f9, #eaeaea);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        footer {
+            background: #111;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--primary);
+        }
+
+        .filter-container {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .filter-container h4 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .filter-group {
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+
+        .filter-group label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            margin-bottom: 8px;
+        }
+
+        .filter-group input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+
+
+        .filter-content::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .filter-content::-webkit-scrollbar-track {
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        .filter-content::-webkit-scrollbar-thumb {
+            background-color: var(--primary);
+            border-radius: 8px;
+        }
+
+       /* Global Styles */
+.menu {
+    background: linear-gradient(135deg, #035e8d, #012c42);
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 0;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu, .menu a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.menu a {
+    display: block;
+    padding: 15px 20px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect */
+.menu a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #f1c40f;
+}
+
+/* Dropdown & Checkbox */
+.menu-dropdown, .menu input[type=checkbox] {
+    display: none;
+}
+
+.menu label {
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+
+/* 🔹 Mobile Menu (Below 1024px) */
+@media screen and (max-width: 1024px) {
+    .menu > ul {
+        display: none;
+        background: #012c42;
+        padding: 10px 0;
+    }
+
+    .menu > label {
+        display: block;
+        padding: 15px 20px;
+        background: #000;
+        text-align: right;
+        font-size: 18px;
+        color: #ffffff;
+        cursor: pointer;
+    }
+
+    .menu > label i {
+        margin-left: 10px;
+    }
+
+    input[type=checkbox]:checked + ul {
+        display: block;
+        animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .menu a {
+        padding: 15px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Dropdown Styling */
+    .menu-dropdown a {
+        background: #024d74;
+    }
+
+    .menu-hasflyout > ul a {
+        background: #023d5b;
+    }
+}
+
+/* 🔹 Desktop Menu (Above 1025px) */
+@media screen and (min-width: 1025px) {
+    .menu {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .menu > ul {
+        display: flex;
+    }
+
+    .menu > ul > li {
+        position: relative;
+    }
+
+    .menu a {
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+
+    /* Dropdown Menu */
+    .menu-hasdropdown {
+        position: relative;
+    }
+
+    .menu-hasdropdown > ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #035e8d;
+        display: none;
+        width: 200px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        overflow: hidden;
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .menu-hasdropdown:hover > ul {
+        display: block;
+    }
+
+    .menu-hasdropdown ul a {
+        padding: 12px 20px;
+    }
+
+    .menu-hasdropdown ul a:hover {
+        background: #f1c40f;
+        color: #000;
+    }
+
+    /* Flyout (Submenu inside dropdown) */
+    .menu-hasflyout > ul {
+        left: 100%;
+        top: 0;
+    }
+
+    .menu-hasflyout .menu-downicon {
+        display: none;
+    }
+}
+
+/* 🔹 Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

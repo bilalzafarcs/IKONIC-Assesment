@@ -9,7 +9,7 @@ Author: Bilal
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: "Poppins", sans-serif !important;
             margin: 0;
             padding: 0;
             scroll-behavior: smooth;
@@ -30,7 +30,7 @@ Author: Bilal
         }
 
         .project-card img {
-            width: 200px;
+            width: 300px;
             height: auto;
             object-fit: cover;
         }
@@ -96,9 +96,7 @@ Author: Bilal
 		}
 
         .btn-container .btn {
-            padding: 10px 20px;
-            font-size: 0.9rem;
-            border-radius: 5px;
+            border-radius: 10px;
         }
 
         .btn-primary:hover {
@@ -107,30 +105,47 @@ Author: Bilal
         }
 
         .btn-primary {
-            font-size: 14px;
-            background-color: var(--primary);
-            background-repeat: no-repeat;
-            background-size: 200% 200%;
-            -webkit-transition: .5s;
-            transition: .5s;
+            font-size: 14px !important;
+            background-color: var(--primary) !important;
+            background-repeat: no-repeat !important;
+            background-size: 200% 200% !important;
+            -webkit-transition: .5s !important;
+            transition: .5s !important;
         }
 
         .btn-outline-secondary {
-            border: 2px solid var(--secondary);
-            color: var(--secondary);
+            border: 2px solid var(--secondary) !important;
+            color: var(--secondary) !important;
         }
 
         .btn-outline-secondary:hover {
-            background-color: var(--secondary);
-            color: white;
-            -webkit-transition: .5s;
-            transition: .5s;
+            background-color: var(--secondary) !important;
+            color: white !important;
+            -webkit-transition: .5s !important;
+            transition: .5s !important;
         }
 
         .bg-light-gradient {
             background: linear-gradient(to right, #f9f9f9, #eaeaea);
         }
 
+        .section-heading {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 600;
+            color: #333; 
+        }
+        
+        .section-heading::before,
+        .section-heading::after {
+            content: "";
+            flex: 1;
+            height: 2px;
+            background: #999; 
+            margin: 0 15px;
+        }
         h2 {
             font-size: 2.5rem;
             font-weight: bold;
@@ -139,9 +154,10 @@ Author: Bilal
         }
 
         footer {
+            width: 100%;
             background: #111;
             color: white;
-            padding: 30px 0;
+            padding: 15px 0;
             text-align: center;
         }
 
@@ -150,7 +166,6 @@ Author: Bilal
             text-decoration: none;
             transition: color 0.3s;
         }
-
         footer a:hover {
             color: var(--primary);
         }
@@ -158,205 +173,164 @@ Author: Bilal
         .filter-container {
             background-color: #fff;
             border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
         }
-
+        
         .filter-container h4 {
             margin-bottom: 15px;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: #333;
-        }
-
-        .filter-group {
-            padding: 20px;
-            margin-bottom: 10px;
-        }
-
-        .filter-group label {
             display: flex;
             align-items: center;
-            cursor: pointer;
-            margin-bottom: 8px;
+            gap: 8px;
         }
-
-        .filter-group input[type="checkbox"] {
-            margin-right: 10px;
+        
+        .filter-group label {
+            font-weight: 600;
+            color: #555;
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
-
-
-
-        .filter-content::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        .filter-content::-webkit-scrollbar-track {
-            background-color: white;
+        
+        .filter-input {
             border-radius: 8px;
+            border: 1px solid #ccc;
+            padding: 8px 12px;
+            transition: all 0.3s ease;
         }
-
-        .filter-content::-webkit-scrollbar-thumb {
-            background-color: var(--primary);
+        
+        .filter-input:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+            outline: none;
+        }
+        
+        .filter-btn {
+            color: white;
             border-radius: 8px;
+            padding: 10px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+        
+        .filter-btn:hover {
+            transform: scale(1.02);
+        }
+        
+          .custom-logo {
+            max-height: 50px; 
+            width: auto;
         }
 
-       /* Global Styles */
-.menu {
-    background: linear-gradient(135deg, #035e8d, #012c42);
-    font-family: 'Poppins', sans-serif;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 0;
-}
+        
+        .dropdown-item {
+            color: #fff;
+          }
+          .dropdown .dropdown-menu {
+            display: none;
+            background: #212529;
+          }
+          .dropdown:hover>.dropdown-menu, 
+          .dropend:hover>.dropdown-menu {
+            display: block;
+            margin-top: .1em;
+            margin-left: .1em;
+          }
+          @media screen and (min-width:769px) {
+            .dropend:hover>.dropdown-menu {
+              position: absolute;
+              top: 0;
+              left: 100%;
+            }
+            .dropend .dropdown-toggle {
+              margin-left: .5em;
+            }
+          }
+          .navbar {
+            background: linear-gradient(135deg, #000000, #4a5d7a);
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .navbar-nav .nav-link {
+            color: white !important;
+            font-weight: 500;
+            transition: color 0.3s ease-in-out;
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: #f8f9fa !important; 
+        }
+        
+        .navbar .dropdown-menu {
+            background: rgba(0, 0, 0, 0.9); 
+            border: none;
+        }
+        
+        .navbar .dropdown-item {
+            color: white;
+            transition: background 0.3s ease-in-out;
+        }
+        
+        .navbar .dropdown-item:hover {
+            background: var(--primary);
+        }
+          
 
-.menu ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
 
-.menu, .menu a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.menu a {
-    display: block;
-    padding: 15px 20px;
-    transition: background 0.3s ease, color 0.3s ease;
-}
-
-/* Hover Effect */
-.menu a:hover {
-    background: rgba(255, 255, 255, 0.2);
-    color: #f1c40f;
-}
-
-/* Dropdown & Checkbox */
-.menu-dropdown, .menu input[type=checkbox] {
-    display: none;
-}
-
-.menu label {
-    cursor: pointer;
-}
-
-/* Responsive Styles */
-
-/* 🔹 Mobile Menu (Below 1024px) */
-@media screen and (max-width: 1024px) {
-    .menu > ul {
-        display: none;
-        background: #012c42;
-        padding: 10px 0;
-    }
-
-    .menu > label {
-        display: block;
-        padding: 15px 20px;
-        background: #000;
-        text-align: right;
-        font-size: 18px;
-        color: #ffffff;
-        cursor: pointer;
-    }
-
-    .menu > label i {
-        margin-left: 10px;
-    }
-
-    input[type=checkbox]:checked + ul {
-        display: block;
-        animation: fadeIn 0.5s ease-in-out;
-    }
-
-    .menu a {
-        padding: 15px 20px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    /* Dropdown Styling */
-    .menu-dropdown a {
-        background: #024d74;
-    }
-
-    .menu-hasflyout > ul a {
-        background: #023d5b;
-    }
-}
-
-/* 🔹 Desktop Menu (Above 1025px) */
-@media screen and (min-width: 1025px) {
-    .menu {
-        max-width: 1100px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-    }
-
-    .menu > ul {
-        display: flex;
-    }
-
-    .menu > ul > li {
-        position: relative;
-    }
-
-    .menu a {
-        padding: 15px 20px;
-        font-size: 16px;
-    }
-
-    /* Dropdown Menu */
-    .menu-hasdropdown {
-        position: relative;
-    }
-
-    .menu-hasdropdown > ul {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background: #035e8d;
-        display: none;
-        width: 200px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        border-radius: 4px;
-        overflow: hidden;
-        animation: fadeIn 0.3s ease-in-out;
-    }
-
-    .menu-hasdropdown:hover > ul {
-        display: block;
-    }
-
-    .menu-hasdropdown ul a {
-        padding: 12px 20px;
-    }
-
-    .menu-hasdropdown ul a:hover {
-        background: #f1c40f;
-        color: #000;
-    }
-
-    /* Flyout (Submenu inside dropdown) */
-    .menu-hasflyout > ul {
-        left: 100%;
-        top: 0;
-    }
-
-    .menu-hasflyout .menu-downicon {
-        display: none;
-    }
-}
-
-/* 🔹 Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-5px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+          .pagination {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .page-numbers {
+            display: inline-block;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            color: white;
+            background: #333;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            width: 35px;
+            height: 35px;
+        }
+        
+        .page-numbers.current {
+            background: #000;
+            color: #fff;
+        }
+        .page-numbers i{
+            position: relative;
+            top: 4px;
+            font-size: 12px;
+        }
+        
+        .page-numbers:hover {
+            background: #000;
+            color: white;
+        }
+        
+        .page-numbers.prev, 
+        .page-numbers.next {
+            background: #000;
+            color: white;
+        }
+        
+        .page-numbers.prev:hover, 
+        .page-numbers.next:hover {
+            background:     #000;
+            color: white;
+        }
+        .page-numbers span{
+            color: white !important;
+        }

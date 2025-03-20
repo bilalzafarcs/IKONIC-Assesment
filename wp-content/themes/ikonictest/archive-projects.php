@@ -7,26 +7,29 @@ get_header();
        
         <div class="row mt-4">
             <div class="col-lg-4 col-12 mb-4">
-                <div class="filter-container">
-                    <h4>Filter by Date:</h4>
-                    <div class="filter-group">
-                        <form method="GET" action="" class="mb-4">
-                            <div class="row">
-                                <div class="col-md-12 mb-2">
-                                    <label for="start_date">Start Date:</label>
-                                    <input type="date" id="start_date" name="start_date" class="form-control" value="<?php echo esc_attr($_GET['start_date'] ?? ''); ?>">
-                                </div>
-                                <div class="col-md-12 mb-2">
-                                    <label for="end_date">End Date:</label>
-                                    <input type="date" id="end_date" name="end_date" class="form-control" value="<?php echo esc_attr($_GET['end_date'] ?? ''); ?>">
-                                </div>
-                                <div class="col-md-12 d-flex align-items-end">
-                                    <button type="submit" class="btn btn-primary w-100">Filter</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+            <div class="filter-container">
+    <h4><i class="fas fa-filter"></i> Filter by Date</h4>
+    <div class="filter-group">
+        <form method="GET" action="" class="mb-4">
+            <div class="row">
+                <div class="col-md-12 mb-3">
+                    <label for="start_date"><i class="far fa-calendar-alt"></i> Start Date:</label>
+                    <input type="date" id="start_date" name="start_date" class="form-control filter-input" value="<?php echo esc_attr($_GET['start_date'] ?? ''); ?>">
                 </div>
+                <div class="col-md-12 mb-3">
+                    <label for="end_date"><i class="far fa-calendar-alt"></i> End Date:</label>
+                    <input type="date" id="end_date" name="end_date" class="form-control filter-input" value="<?php echo esc_attr($_GET['end_date'] ?? ''); ?>">
+                </div>
+                <div class="col-md-12 d-flex align-items-end">
+                    <button type="submit" class="btn btn-primary filter-btn w-100">
+                        <i class="fas fa-search"></i> Apply Filter
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
             </div>
 
             <div class="col-lg-8 col-12">
@@ -90,6 +93,16 @@ get_header();
                     endif;
                     ?>
                 </div>
+                <div class="pagination justify-content-center">
+        <?php 
+        echo paginate_links(array(
+            'prev_text' => '<i class="fa-solid fa-chevron-left"></i>',
+            'next_text' => '<i class="fa-solid fa-chevron-right"></i>',
+            'before_page_number' => '<span class="btn btn-pagination">',
+            'after_page_number'  => '</span>',
+        )); 
+        ?>
+    </div>
             </div>
         </div>
     </div>

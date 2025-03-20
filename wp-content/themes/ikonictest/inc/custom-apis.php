@@ -25,7 +25,7 @@ function projects_details() {
             
             $projects[] = array(
             'title'       => get_the_title(),
-            'url'         => get_permalink(),
+            'url'         => get_post_meta(get_the_ID(), 'project_url', true),
             'start_date'  => date('F j, Y', strtotime(get_post_meta(get_the_ID(), 'project_start_date', true))),
             'end_date'    => date('F j, Y', strtotime(get_post_meta(get_the_ID(), 'project_end_date', true))),
             );
